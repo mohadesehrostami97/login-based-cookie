@@ -6,7 +6,8 @@ const rememberMeCheckbox = document.querySelector("#remember-me");
 const loginButton = document.querySelector(".login-button");
 const modal = document.querySelector(".modal-screen");
 const modalText = document.querySelector(".modal-text")
-
+const modalCard = document.querySelector(".modal-card");
+const okButton = document.querySelector(".ok-button");
 
 const login = (event) => {
   event.preventDefault();
@@ -35,8 +36,13 @@ const login = (event) => {
 
   }
 };
-
+okButton.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
 loginButton.addEventListener("click", login);
 
-
-console.log(modalText);

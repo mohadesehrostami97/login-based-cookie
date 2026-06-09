@@ -18,6 +18,6 @@ window.addEventListener("load", () => {
 
     userInfoInDom.innerHTML = `Username = ${user.username}`;
   } else {
-    console.log("User not found");
+    userInfoInDom.innerHTML = "User Not Found";
   }
 });
